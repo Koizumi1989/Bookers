@@ -1,6 +1,8 @@
+<%= stylesheet_link_tag "books", :media => "all" %>
 <%= flash[:notice] %><br>
-<span><strong>Title:</strong><%= @book.title %></span><br>
-<span><strong>Body:</strong><%= @book.body %></span>
+<span class="show_html"><strong>Title:</strong><%= @book.title %></span><br>
+<span class="show_html"><strong>Body:</strong><%= @book.body %></span><br>
 
-<p><%= link_to 'Edit','/books/edit/' + @book.id.to_s %></p>
-<p><%= link_to 'Back','/books/index' %></p>
+<span><%= link_to 'Edit','/books/edit/' + @book.id.to_s %></span>
+<span>|</span>
+<span><%= link_to 'Back','/books/index' %></span>

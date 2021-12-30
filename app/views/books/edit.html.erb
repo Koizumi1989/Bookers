@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "books", :media => "all" %>
 <h2>Editiong Book</h2>
 
 <% if @book.errors.any? %>
@@ -10,14 +11,15 @@
 <% end %>
 
 <%= form_with model: @book,url:'/books/' + @book.id.to_s,method: :patch, local:true do |f| %>
-  <p>Title</p>
+  <p class="edit_html">Title</p>
   <%= f.text_field :title %>
 
-  <p>Body</p>
+  <p class="edit_html">Body</p>
   <%= f.text_area :body %>
   <br>
-  <%= f.submit 'Update Book' %>
+  <%= f.submit 'Update Book' , :class => "btn" %>
 <% end %>
 
-<p><%= link_to 'Show','/books/show/' + @book.id.to_s %></p>
-<p><%= link_to 'Back','/books/index' %></p>
+<span><%= link_to 'Show','/books/show/' + @book.id.to_s %></span>
+<span>|</span>
+<span><%= link_to 'Back','/books/index' %></span>
