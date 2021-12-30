@@ -20,6 +20,6 @@
   <%= f.submit 'Update Book' , :class => "btn" %>
 <% end %>
 
-<span><%= link_to 'Show','/books/show/' + @book.id.to_s %></span>
+<span><%= link_to 'Show','/books/' + @book.id.to_s %></span>
 <span>|</span>
-<span><%= link_to 'Back','/books/index' %></span>
+<span><%= link_to 'Back','/books' %></span>

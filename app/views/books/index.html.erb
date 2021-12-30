@@ -13,8 +13,8 @@
     <tr>
       <td><%= b.title %></td>
       <td><%= b.body %></td>
-      <td><%= link_to 'Show','/books/show/'+ b.id.to_s %></td>
-      <td><%= link_to 'Edit','/books/edit/'+ b.id.to_s %></td>
+      <td><%= link_to 'Show','/books/'+ b.id.to_s %></td>
+      <td><%= link_to 'Edit','/books/'+ b.id.to_s + '/edit' %></td>
       <td><%= link_to 'Destroy','/books/'+ b.id.to_s, method: :delete, "data-confirm" => "本当に削除しますか？" %></td>
     </tr>
     <% end %>
