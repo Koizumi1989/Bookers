@@ -12,6 +12,7 @@
     <% @books.each do |b| %>
     <tr>
       <td><%= b.title %></td>
+      
       <td><%= b.body %></td>
       <td><%= link_to 'Show','/books/'+ b.id.to_s %></td>
       <td><%= link_to 'Edit','/books/'+ b.id.to_s + '/edit' %></td>
